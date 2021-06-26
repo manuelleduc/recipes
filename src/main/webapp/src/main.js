@@ -7,6 +7,28 @@ import 'quill/dist/quill.snow.css' // for snow theme
 import 'quill/dist/quill.bubble.css' // for bubble theme
 import InputTag from 'vue-input-tag'
 import Vuex from 'vuex';
+import VueNotifications from 'vue-notifications'
+import miniToastr from 'mini-toastr';
+
+const toastTypes = {
+    success: 'success',
+    error: 'error',
+    info: 'info',
+    warn: 'warn'
+}
+
+miniToastr.init({types: toastTypes})
+
+function toast({title, message, type, timeout, cb}) {
+    return miniToastr[type](message, title, timeout, cb)
+}
+
+Vue.use(VueNotifications, {
+    success: toast,
+    error: toast,
+    info: toast,
+    warn: toast
+})
 
 Vue.use(Vuex)
 

@@ -38,7 +38,15 @@ export default {
         description: this.description,
         tags: this.tags
       })
+      this.saveSuccess();
       Object.assign(this.$data, initialState());
+    }
+  },
+  notifications: {
+    saveSuccess: {
+      'title': 'Recette sauvegardée',
+      'message': 'La recette a bien été sauvegardée',
+      'type': 'success'
     }
   }
 }

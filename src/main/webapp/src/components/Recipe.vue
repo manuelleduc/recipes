@@ -25,6 +25,14 @@ export default {
       this.deleting = true;
       await this.$store.dispatch('deleteRecipe', this.recipe.id)
       this.deleting = false
+      this.deleteSuccess();
+    }
+  },
+  notifications: {
+    deleteSuccess: {
+      'title': 'Recette supprimée',
+      'message': 'La recette a bien été supprimée',
+      'type': 'success'
     }
   }
 }
