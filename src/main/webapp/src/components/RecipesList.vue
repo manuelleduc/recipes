@@ -1,26 +1,21 @@
 <template>
   <div>
-    <div v-for="(recipe, idx) in recipes" :key="`recipe-${idx}`">
-      {{ recipe.title }}
-    </div>
+    <Recipe v-for="recipe in recipes" :key="`recipe-${recipe.id}`" :recipe="recipe"/>
   </div>
 </template>
 
 <script>
+import Recipe from "@/components/Recipe";
+import {mapState} from 'vuex'
+
 export default {
   name: "RecipesList",
-  data: () => ({
-    recipes: []
-  }),
-  created() {
-    this.$http.get("/recipes")
-        .then((res) => {
-          this.recipes = res.data;
-        })
-  }
+  components: {Recipe},
+  computed:
+      mapState({
+        recipes: (state) => state.recipes,
+      })
 }
+
 </script>
 
-<style scoped>
-
-</style>
