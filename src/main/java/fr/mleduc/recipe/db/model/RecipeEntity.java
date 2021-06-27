@@ -1,5 +1,6 @@
-package fr.mleduc.recipe;
+package fr.mleduc.recipe.db.model;
 
+import fr.mleduc.recipe.rest.model.Recipe;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
 import javax.persistence.Entity;

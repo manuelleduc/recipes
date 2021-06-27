@@ -1,4 +1,7 @@
-package fr.mleduc.recipe;
+package fr.mleduc.recipe.resource;
+
+import fr.mleduc.recipe.rest.model.Recipe;
+import fr.mleduc.recipe.service.RecipeService;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;

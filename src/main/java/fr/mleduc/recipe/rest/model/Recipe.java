@@ -1,4 +1,6 @@
-package fr.mleduc.recipe;
+package fr.mleduc.recipe.rest.model;
+
+import fr.mleduc.recipe.db.model.RecipeEntity;
 
 public class Recipe {
     private Long id;

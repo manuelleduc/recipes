@@ -1,4 +1,7 @@
-package fr.mleduc.recipe;
+package fr.mleduc.recipe.service;
+
+import fr.mleduc.recipe.db.model.RecipeEntity;
+import fr.mleduc.recipe.rest.model.Recipe;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.transaction.Transactional;
