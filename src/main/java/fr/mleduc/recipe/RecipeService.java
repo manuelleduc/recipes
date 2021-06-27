@@ -23,4 +23,13 @@ public class RecipeService {
     public void delete(Long id) {
         RecipeEntity.findById(id).delete();
     }
+
+    @Transactional
+    public void updateRecipe(Recipe recipe) {
+        RecipeEntity entity = RecipeEntity.findById(recipe.getId());
+        entity.tags = recipe.getTags();
+        entity.title = recipe.getTitle();
+        entity.description = recipe.getDescription();
+        entity.persist();
+    }
 }

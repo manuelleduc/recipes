@@ -2,7 +2,7 @@ package fr.mleduc.recipe;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
 
 @Entity
 public class RecipeEntity extends PanacheEntity {

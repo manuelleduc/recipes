@@ -44,12 +44,17 @@ Vue.config.productionTip = false
 
 const store = new Vuex.Store({
     state: {
-        recipes: []
+        recipes: [],
+        editingRecipe: undefined
     },
     mutations: {
         recipes(state, recipes) {
             state.recipes = recipes;
-        }
+            state.editingRecipe = undefined;
+        },
+        setEditRecipe(state, recipeId) {
+            state.editingRecipe = recipeId;
+        },
     },
     actions: {
         getRecipes({commit}) {
@@ -69,6 +74,16 @@ const store = new Vuex.Store({
             return Vue.http.post('/recipe', recipe).then(() => {
                 dispatch('getRecipes')
             })
+        },
+        startEditRecipe({commit}, recipeId) {
+            commit('setEditRecipe', recipeId);
+        },
+        cancelEditRecipe({commit}) {
+            commit('setEditRecipe', undefined);
+        },
+        async updateRecipe({dispatch}, recipe) {
+            await Vue.http.put('/recipe', recipe);
+            dispatch('getRecipes')
         }
     }
 });

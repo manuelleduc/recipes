@@ -23,6 +23,11 @@ public class RecipesResource {
         recipeService.createRecipe(recipe);
     }
 
+    @PUT
+    public void update(Recipe recipe) {
+        recipeService.updateRecipe(recipe);
+    }
+
     @DELETE
     @Path("{id}")
     public void delete(@PathParam("id") Long id) {
