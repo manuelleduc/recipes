@@ -1,3 +1,8 @@
+<script setup>
+import RecipesList from './components/RecipesList.vue'
+import NewRecipeForm from './components/NewRecipeForm.vue'
+</script>
+
 <template>
   <div id="app">
     <RecipesList/>
@@ -5,22 +10,4 @@
   </div>
 </template>
 
-<script>
-import RecipesList from "@/components/RecipesList";
-import NewRecipeForm from "@/components/NewRecipeForm";
-
-export default {
-  name: 'App',
-  components: {
-    NewRecipeForm,
-    RecipesList
-  },
-  created() {
-    this.$store.dispatch('getRecipes').then()
-  }
-}
-</script>
-
-<style>
-
-</style>
+<style></style>
