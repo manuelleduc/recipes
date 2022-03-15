@@ -16,7 +16,7 @@
     "@sipec/vue3-tags-input": "3.0.4"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "1.1.0",
+    "@rushstack/eslint-patch": "1.1.1",
     "@vitejs/plugin-vue": "2.2.4",
     "@vue/eslint-config-prettier": "7.0.0",
     "@vue/test-utils": "2.0.0-rc.18",
