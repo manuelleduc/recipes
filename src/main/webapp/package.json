@@ -10,7 +10,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "pinia": "2.0.12",
+    "pinia": "2.0.14",
     "vue": "3.2.31",
     "vue3-quill": "0.2.6",
     "@sipec/vue3-tags-input": "3.0.4"
