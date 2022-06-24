@@ -40,3 +40,4 @@ nb-configuration.xml
 
 src/main/resources/META-INF/resources
 h2file.*
+/.mvn/wrapper/maven-wrapper.jar
