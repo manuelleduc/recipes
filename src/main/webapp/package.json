@@ -22,7 +22,7 @@
     "@vue/test-utils": "2.0.0",
     "eslint": "8.18.0",
     "eslint-plugin-vue": "9.1.1",
-    "jsdom": "19.0.0",
+    "jsdom": "20.0.0",
     "prettier": "2.7.1",
     "vite": "2.9.12",
     "vitest": "0.16.0"
