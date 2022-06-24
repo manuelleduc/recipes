@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "pinia": "2.0.14",
-    "vue": "3.2.31",
+    "vue": "3.2.37",
     "vue3-quill": "0.2.6",
     "@sipec/vue3-tags-input": "3.0.4"
   },
