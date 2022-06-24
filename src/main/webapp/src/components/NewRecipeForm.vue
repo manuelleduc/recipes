@@ -16,9 +16,7 @@ const sending = ref(false)
 const recipeStore = useRecipesStore();
 
 const canSubmit = computed(() => {
-  console.debug('>>>...', title.value !== '', description.value !== '', sending.value)
   let b = title.value !== '' && description.value !== '' && !sending.value;
-  console.log(b)
   return b
 })
 
